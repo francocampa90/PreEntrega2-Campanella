@@ -50,39 +50,36 @@ if(seleccion == "si"){
 
     alert(todoslosProductos.join(" - "));
 
+    filtrar = prompt("¿ Desea colocar un filtro? si o no")
+
+    if(filtrar == "si"){
+        promptFiltrar();
+        if(prompt1 === 1){
+            filtrarNombre();
+            console.log("Filtrado por el nombre")
+            console.log(filtrado);
+        } else if(prompt1 === 2){ 
+                filtrarMenorprecio();
+                console.log("Filtrado por el menor precio")
+                console.log(filtrado);
+            } else if(prompt1 === 3){ 
+                filtrarMayorprecio();
+                console.log("Filtrado por el mayor precio")
+                console.log(filtrado);
+
+                } else if(prompt1 === 4){ 
+                    filtrarTipo();
+                    console.log("Filtrado por el tipo")
+                    console.log(filtrado);
+                }
+    } 
+
+    alert("¿Que libro desea comprar?");
+
 } else if (seleccion =="no"){
     alert("gracias por venir");
 }
 
-
-
-
-filtrar = prompt("¿ Desea colocar un filtro? si o no")
-
-
-if(filtrar == "si"){
-    promptFiltrar();
-    if(prompt1 === 1){
-        filtrarNombre();
-        console.log("Filtrado por el nombre")
-        console.log(filtrado);
-     } else if(prompt1 === 2){ 
-            filtrarMenorprecio();
-            console.log("Filtrado por el menor precio")
-            console.log(filtrado);
-        } else if(prompt1 === 3){ 
-            filtrarMayorprecio();
-            console.log("Filtrado por el mayor precio")
-            console.log(filtrado);
-
-            } else if(prompt1 === 4){ 
-                filtrarTipo();
-                console.log("Filtrado por el tipo")
-                console.log(filtrado);
-            }
-} 
-
-alert("¿Que libro desea comprar?");
 
 while(seleccion != "no"){
     
